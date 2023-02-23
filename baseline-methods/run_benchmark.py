@@ -12,8 +12,8 @@ from DataLoader import *
 sys.path.append('../data/HSLS')
 from hsls_utils import *
 
-sys.path.append('../FACT-master')
-from FACT.postprocess import *
+#sys.path.append('../FACT-master')
+#from FACT.postprocess import *
 
 sys.path.append('..')
 from leveraging.utils import leveraging_approach
@@ -129,8 +129,8 @@ def main(argv):
         elif constraint == 'eo':
             results = bm.roc(model, num_iter, seed, params=eps_list, constraint='EqualizedOdds')
 
-    elif fair == 'fact':
-        results = post_process(model, inputfile)
+    #elif fair == 'fact':
+    #    results = post_process(model, inputfile)
         
     elif fair == 'leveraging':
         _, results, _ = leveraging_approach(df, protected_attrs, label_name, use_protected=True, model = model, num_iter = num_iter, rand_seed =seed)
