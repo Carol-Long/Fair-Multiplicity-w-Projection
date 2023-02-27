@@ -1,0 +1,37 @@
+WARNING:root:No module named 'tempeh': LawSchoolGPADataset will be unavailable. To install, run:
+pip install 'aif360[LawSchoolGPA]'
+WARNING:root:No module named 'tensorflow': AdversarialDebiasing will be unavailable. To install, run:
+pip install 'aif360[AdversarialDebiasing]'
+WARNING:root:No module named 'tensorflow': AdversarialDebiasing will be unavailable. To install, run:
+pip install 'aif360[AdversarialDebiasing]'
+#### Data Loaded. 
+Iteration # 0
+Average odds difference:0.051195153572811625
+Overall Test Accuracy:0.5946969696969697
+Overall Test Multiplicity:0.0
+Time per iteration:0.7005636692047119
+----------------------------------------------------------
+Iteration # 1
+Average odds difference:0.027827452476306552
+Overall Test Accuracy:0.6186868686868687
+Overall Test Multiplicity:0.0
+Time per iteration:0.614452600479126
+----------------------------------------------------------
+Iteration # 2
+Average odds difference:0.004306752691592142
+Overall Test Accuracy:0.6376262626262627
+Overall Test Multiplicity:0.0
+Time per iteration:0.6368389129638672
+----------------------------------------------------------
+Iteration # 3
+Average odds difference:0.002808844910849234
+Overall Test Accuracy:0.6237373737373737
+Overall Test Multiplicity:0.0
+Time per iteration:0.5801441669464111
+----------------------------------------------------------
+Iteration # 4
+Average odds difference:0.05035286621767751
+Overall Test Accuracy:0.6338383838383839
+Overall Test Multiplicity:0.0
+Time per iteration:0.7016234397888184
+----------------------------------------------------------
