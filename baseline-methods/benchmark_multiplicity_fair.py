@@ -109,7 +109,6 @@ class Benchmark_Multiplicity_Fair:
         ave_multiplicity = np.mean(multiplicity)
         return ave_multiplicity       
        
-    # added multiplicity
     def reduction(self, model_name='gbm', num_iter=10, rand_seed=25, constraint='EqualizedOdds', params=[0.1]): 
         
         metric_names = ['sp', 'avgeo', 'abseo', 'maxeo', 'acc', 'brier', 'time', 'multiplicity']
@@ -273,7 +272,7 @@ class Benchmark_Multiplicity_Fair:
                 if calibrated: 
                     cpp = CalibratedEqOddsPostprocessing(privileged_groups = self._privileged_groups,
                                                         unprivileged_groups = self._unprivileged_groups,seed=rand_seed,
-                                                        cost_constraint=constraint)
+                                                        cost_constraint="weighted")
                 else: 
                     cpp = EqOddsPostprocessing(privileged_groups = self._privileged_groups,
                                             unprivileged_groups = self._unprivileged_groups,seed=rand_seed)
@@ -454,6 +453,8 @@ class Benchmark_Multiplicity_Fair:
                     model = GradientBoostingClassifier(random_state=rand)
                 elif model_name == 'logit': 
                     model = LogisticRegression(random_state=rand)
+                elif model_name == 'rf':
+                    model = RandomForestClassifier(random_state=rand, n_estimators=10, min_samples_leaf=10)
                 else: 
                     print('Error: Undefined Model')
                     return 
