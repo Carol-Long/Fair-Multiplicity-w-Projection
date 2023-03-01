@@ -25,9 +25,9 @@ warnings.filterwarnings("ignore")
 def main(argv):
     model = 'gbm'
     fair = 'reduction'
-    seed = 42
+    seed = 25
     constraint = 'eo'
-    num_iter = 10
+    num_iter = 8
     inputfile = 'enem'
     
     try:
@@ -108,7 +108,7 @@ def main(argv):
 
     #### Run benchmarks ####
     if fair == 'reduction':
-        eps_list = [0.001, 0.005, 0.01, 0.02, 0.05, 0.1, 0.2, 0.5, 1, 2] # Epsilon values for reduction method #
+        eps_list = [0.001, 0.005, 0.01, 0.02, 0.05, 0.1, 0.2, 0.5, 1, 2, 4] # Epsilon values for reduction method #
         if constraint == 'sp':
             results = bm.reduction(model, num_iter, seed, params=eps_list, constraint='DemographicParity')
         elif constraint == 'eo':
@@ -123,7 +123,7 @@ def main(argv):
         constraint = ''
         
     elif fair == 'roc':
-        eps_list = [0.001, 0.005, 0.01, 0.02, 0.05, 0.1, 0.2, 0.5, 1, 2] # Metric ub and lb values for roc method #
+        eps_list = [0.001, 0.005, 0.01, 0.02, 0.05, 0.1, 0.2, 0.5, 1, 2, 4] # Metric ub and lb values for roc method #
         if constraint == 'sp':
             results = bm.roc(model, num_iter, seed, params=eps_list, constraint='DemographicParity')
         elif constraint == 'eo':
@@ -145,7 +145,7 @@ def main(argv):
 
 
     result_path = './results/'
-    filename = fair+'_'+model+'_s'+str(seed)+'_' + constraint+'.pkl'
+    filename = inputfile + '_' + fair+'_'+model+'_s'+str(seed)+'_' + constraint+'.pkl'
     if not os.path.exists(result_path):
         os.makedirs(result_path)
 
