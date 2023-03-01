@@ -15,8 +15,8 @@ def load_data(name='adult'):
     
     #% Processing for UCI-ADULT
     if name == 'adult':
-        file = '../data/UCI-Adult/adult.data'
-        fileTest = '../data/UCI-Adult/adult.test'
+        file = '../../data/UCI-Adult/adult.data'
+        fileTest = '../../data/UCI-Adult/adult.test'
         
         df = pd.read_csv(file, header=None,sep=',\s+',engine='python')
         dfTest = pd.read_csv(fileTest,header=None,skiprows=1,sep=',\s+',engine='python') 
@@ -69,7 +69,7 @@ def load_data(name='adult'):
     
     #% Processing for COMPAS
     if name == 'compas':
-        file = '../data/COMPAS/compas-scores-two-years.csv'
+        file = '../../data/COMPAS/compas-scores-two-years.csv'
         df = pd.read_csv(file,index_col=0)
         
         # select features for analysis

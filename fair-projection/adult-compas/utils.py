@@ -150,6 +150,20 @@ def evaluation(idx1, idx2, clf, X, y, s, t,
     sp[idx1, idx2] = statistical_parity_difference(y_pred, s)
     return
 
+def compute_ave_multiplicity_helper(y_pred_list):
+    
+    num_models = len(y_pred_list)
+    for i in range(num_models):
+        y_pred_list[i] = y_pred_list[i].astype(int)
+
+    multiplicity = y_pred_list[0]^y_pred_list[1]
+    for i in range(num_models):
+        for j in range(i+1, num_models):
+            multiplicity += y_pred_list[i]^y_pred_list[j]
+    multiplicity = multiplicity>=1
+    ave_multiplicity = np.mean(multiplicity)
+    return ave_multiplicity       
+    
 def MP_tol(df, tolerance, protected_attrs, label_name, use_protected, use_sample_weight, tune_threshold, log, model='gbm', div='cross-entropy', num_iter=10, rand_seed=42, constraint='meo'):
     acc = np.zeros((len(tolerance), num_iter))
     brier = np.zeros((len(tolerance), num_iter))
@@ -159,6 +173,8 @@ def MP_tol(df, tolerance, protected_attrs, label_name, use_protected, use_sample
     mo = np.zeros((len(tolerance), num_iter))
     sp = np.zeros((len(tolerance), num_iter))
     dcp_msk = np.zeros((len(tolerance), num_iter))
+    multiplicity = np.zeros((len(tolerance), num_iter))
+
     # protected_attrs = ['racebin']
     # label_name = 'gradebin'
 
@@ -186,64 +202,77 @@ def MP_tol(df, tolerance, protected_attrs, label_name, use_protected, use_sample
         s_train = dataset_orig_train.features[:, idx_protected].ravel()
         s_test = dataset_orig_test.features[:, idx_protected].ravel()
 
-        # declare classifiers
-        if model == 'gbm':
-            clf_YgX = GradientBoostingClassifier(random_state=rand_seed)  # will predict Y from X
-            clf_SgX = GradientBoostingClassifier(random_state=rand_seed)  # will predict S from X (needed for SP)
-            clf_SgXY = GradientBoostingClassifier(random_state=rand_seed)  # will predict S from (X,Y)
-        elif model == 'logit':
-            clf_YgX = LogisticRegression(random_state=rand_seed, max_iter=10000)  # will predict Y from X
-            clf_SgX = LogisticRegression(random_state=rand_seed, max_iter=10000)  # will predict S from X (needed for SP)
-            clf_SgXY = LogisticRegression(random_state=rand_seed, max_iter=10000)  # will predict S from (X,Y)
-        elif model == 'rfc':
-            clf_YgX = RandomForestClassifier(random_state=rand_seed, n_estimators=10, min_samples_leaf=10)  # will predict Y from X
-            clf_SgX = RandomForestClassifier(random_state=rand_seed, n_estimators=10, min_samples_leaf=10)  # will predict S from X (needed for SP)
-            clf_SgXY = RandomForestClassifier(random_state=rand_seed, n_estimators=10, min_samples_leaf=10)  # will predict S from (X,Y)
-        else:
-            log.write('Error: Undefined Model\n')
+        y_pred_list_tol = {}
+        for i in range(len(tolerance)):
+            y_pred_list_tol[tolerance[i]] = []
+
+        for rand in range(rand_seed+1):
+            # declare classifiers
+            if model == 'gbm':
+                clf_YgX = GradientBoostingClassifier(random_state=rand)  # will predict Y from X
+                clf_SgX = GradientBoostingClassifier(random_state=rand)  # will predict S from X (needed for SP)
+                clf_SgXY = GradientBoostingClassifier(random_state=rand)  # will predict S from (X,Y)
+            elif model == 'logit':
+                clf_YgX = LogisticRegression(random_state=rand, max_iter=10000)  # will predict Y from X
+                clf_SgX = LogisticRegression(random_state=rand, max_iter=10000)  # will predict S from X (needed for SP)
+                clf_SgXY = LogisticRegression(random_state=rand, max_iter=10000)  # will predict S from (X,Y)
+            elif model == 'rfc':
+                clf_YgX = RandomForestClassifier(random_state=rand, n_estimators=10, min_samples_leaf=10)  # will predict Y from X
+                clf_SgX = RandomForestClassifier(random_state=rand, n_estimators=10, min_samples_leaf=10)  # will predict S from X (needed for SP)
+                clf_SgXY = RandomForestClassifier(random_state=rand, n_estimators=10, min_samples_leaf=10)  # will predict S from (X,Y)
+            else:
+                log.write('Error: Undefined Model\n')
+                log.flush()
+                return
+
+            t_fit = time.localtime()
+            ## initalize GFair class and train classifiers
+            gf = GF.GFair(clf_YgX, clf_SgX, clf_SgXY, div=div)
+            if use_sample_weight:
+                gf.fit(X=X_train, y=y_train, s=s_train, sample_weight=dataset_orig_train.instance_weights)
+            else:
+                gf.fit(X=X_train, y=y_train, s=s_train, sample_weight=None)
+            log.write('  Time to fit the base models: {:4.3f} mins\n'.format((time.mktime(time.localtime()) - time.mktime(t_fit))/60))
             log.flush()
-            return
 
-        t_fit = time.localtime()
-        ## initalize GFair class and train classifiers
-        gf = GF.GFair(clf_YgX, clf_SgX, clf_SgXY, div=div)
-        if use_sample_weight:
-            gf.fit(X=X_train, y=y_train, s=s_train, sample_weight=dataset_orig_train.instance_weights)
-        else:
-            gf.fit(X=X_train, y=y_train, s=s_train, sample_weight=None)
-        log.write('  Time to fit the base models: {:4.3f} mins\n'.format((time.mktime(time.localtime()) - time.mktime(t_fit))/60))
-        log.flush()
+            ## start projection
+            for i, tol in enumerate(tolerance):
+                t_tol = time.localtime()
 
-        ## start projection
+                try: ## in case the solver has issues
+                    ## model projection
+                    constraints = [(constraint, tol)]
+                    gf.project(X=X_train, s=s_train, constraints=constraints, rho=2, max_iter=500, method='tf')
+
+                    log.write('  Tolerance: {:.4f}, projection time: {:4.3f} mins, '.format(tol, (time.mktime(time.localtime()) - time.mktime(t_tol)) / 60))
+                    log.flush()
+
+                    ## set classification threshold
+                    t_threshold = time.localtime()
+                    if not tune_threshold:
+                        threshold = 0.5
+                    else:
+                        threshold = search_threshold(gf, X_train, y_train, s_train)
+                    log.write('threshold: {:.4f}, threshold time: {:4.3f} mins\n'.format(threshold, (time.mktime(time.localtime()) - time.mktime(t_threshold)) / 60))
+                    log.flush()
+
+                    ## evaluation
+                    evaluation(i, seed, gf, X_test, y_test, s_test, threshold,
+                            acc, brier, auc, meo, meo_abs, mo, sp)
+                    y_prob = np.squeeze(gf.predict_proba(X=X_test, s=s_test), axis=2)
+                    y_pred = (y_prob[:, 1] > threshold).astype('int')
+                    y_pred_list_tol[tol].append(y_pred)
+                except:
+                    dcp_msk[i, seed] = 1
+                    log.write('  Tolerance: {:.4f}, DCPError!!!\n'.format(tol))
+                    log.flush()
+                    continue
+        
         for i, tol in enumerate(tolerance):
-            t_tol = time.localtime()
-
-            try: ## in case the solver has issues
-                ## model projection
-                constraints = [(constraint, tol)]
-                gf.project(X=X_train, s=s_train, constraints=constraints, rho=2, max_iter=500, method='tf')
-
-                log.write('  Tolerance: {:.4f}, projection time: {:4.3f} mins, '.format(tol, (time.mktime(time.localtime()) - time.mktime(t_tol)) / 60))
-                log.flush()
-
-                ## set classification threshold
-                t_threshold = time.localtime()
-                if not tune_threshold:
-                    threshold = 0.5
-                else:
-                    threshold = search_threshold(gf, X_train, y_train, s_train)
-                log.write('threshold: {:.4f}, threshold time: {:4.3f} mins\n'.format(threshold, (time.mktime(time.localtime()) - time.mktime(t_threshold)) / 60))
-                log.flush()
-
-                ## evaluation
-                evaluation(i, seed, gf, X_test, y_test, s_test, threshold,
-                           acc, brier, auc, meo, meo_abs, mo, sp)
-
-            except:
-                dcp_msk[i, seed] = 1
-                log.write('  Tolerance: {:.4f}, DCPError!!!\n'.format(tol))
-                log.flush()
-                continue
+            y_pred_list = y_pred_list_tol[tol]
+            multiplicity[i, seed] = compute_ave_multiplicity_helper(y_pred_list)
+            log.write('  Tolerance: {:.4f}, multiplicity: {:.4f}\n'.format(tol, multiplicity[i, seed]))
+            log.flush()
 
         log.write('  Epoch Time: {:4.3f} mins\n'.format((time.mktime(time.localtime()) - time.mktime(t_epoch))/60))
         log.flush()
@@ -256,7 +285,8 @@ def MP_tol(df, tolerance, protected_attrs, label_name, use_protected, use_sample
         'meo_abs': meo_abs,
         'mo': mo,
         'sp': sp,
-        'dcp': dcp_msk
+        'dcp': dcp_msk,
+        'multiplicity': multiplicity
     }
     log.write(' Total Time: {:4.3f} mins\n'.format((time.mktime(time.localtime()) - time.mktime(t_all))/60))
     log.flush()

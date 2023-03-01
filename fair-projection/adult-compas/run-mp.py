@@ -46,12 +46,13 @@ elif args.dataset == 'compas':
 else:
     f.write('Undefined Dataset')
 
-repetition = 10
+repetition = 8
 use_protected = True
 use_sample_weight = True
 tune_threshold = False
 # tolerance = [0.000, 0.001, 0.002, 0.005, 0.01, 0.02, 0.05, 0.1, 0.2, 0.5, 1.0]
-tolerance = [0.000, 0.001, 0.005, 0.01, 0.05, 0.1, 0.5, 1.0]
+# tolerance = [0.000, 0.001, 0.005, 0.01, 0.05, 0.1, 0.5, 1.0, 2.0]
+tolerance = [0.000, 0.001, 0.01, 0.1, 1.0, 2.0]
 
 f.write('Setup Summary\n')
 f.write(' Sampled Dataset Shape: ' + str(df.shape) + '\n')
@@ -65,22 +66,22 @@ f.flush()
 ### CE
 ## GBM
 f.write('GMB - CE - meo\n')
-gbm_ce_meo = MP_tol(df, protected_attrs=protected_attrs, label_name=label_name, use_protected = use_protected, use_sample_weight=use_sample_weight, tune_threshold=tune_threshold, tolerance=tolerance, log = f, model='gbm', div='cross-entropy', num_iter=repetition, rand_seed=42, constraint='meo')
+gbm_ce_meo = MP_tol(df, protected_attrs=protected_attrs, label_name=label_name, use_protected = use_protected, use_sample_weight=use_sample_weight, tune_threshold=tune_threshold, tolerance=tolerance, log = f, model='gbm', div='cross-entropy', num_iter=repetition, rand_seed=25, constraint='meo')
 # ##
 f.write('GMB - CE - sp\n')
-gbm_ce_sp = MP_tol(df, protected_attrs=protected_attrs, label_name=label_name, use_protected = use_protected, use_sample_weight=use_sample_weight, tune_threshold=tune_threshold, tolerance=tolerance, log = f, model='gbm', div='cross-entropy', num_iter=repetition, rand_seed=42, constraint='sp')
+gbm_ce_sp = MP_tol(df, protected_attrs=protected_attrs, label_name=label_name, use_protected = use_protected, use_sample_weight=use_sample_weight, tune_threshold=tune_threshold, tolerance=tolerance, log = f, model='gbm', div='cross-entropy', num_iter=repetition, rand_seed=25, constraint='sp')
 # # ## Logit
 f.write('Logit - CE - meo\n')
-logit_ce_meo = MP_tol(df, protected_attrs=protected_attrs, label_name=label_name, use_protected = use_protected, use_sample_weight=use_sample_weight, tune_threshold=tune_threshold, tolerance=tolerance, log = f, model='logit', div='cross-entropy', num_iter=repetition, rand_seed=42, constraint='meo')
+logit_ce_meo = MP_tol(df, protected_attrs=protected_attrs, label_name=label_name, use_protected = use_protected, use_sample_weight=use_sample_weight, tune_threshold=tune_threshold, tolerance=tolerance, log = f, model='logit', div='cross-entropy', num_iter=repetition, rand_seed=25, constraint='meo')
 # ##
 f.write('Logit - CE - sp\n')
-logit_ce_sp = MP_tol(df, protected_attrs=protected_attrs, label_name=label_name, use_protected = use_protected, use_sample_weight=use_sample_weight, tune_threshold=tune_threshold, tolerance=tolerance, log = f, model='logit', div='cross-entropy', num_iter=repetition, rand_seed=42, constraint='sp')
+logit_ce_sp = MP_tol(df, protected_attrs=protected_attrs, label_name=label_name, use_protected = use_protected, use_sample_weight=use_sample_weight, tune_threshold=tune_threshold, tolerance=tolerance, log = f, model='logit', div='cross-entropy', num_iter=repetition, rand_seed=25, constraint='sp')
 # ## Random Forest
 f.write('RFC - CE - meo\n')
-rfc_ce_meo = MP_tol(df, protected_attrs=protected_attrs, label_name=label_name, use_protected = use_protected, use_sample_weight=use_sample_weight, tune_threshold=tune_threshold, tolerance=tolerance, log = f, model='rfc', div='cross-entropy', num_iter=repetition, rand_seed=42, constraint='meo')
+rfc_ce_meo = MP_tol(df, protected_attrs=protected_attrs, label_name=label_name, use_protected = use_protected, use_sample_weight=use_sample_weight, tune_threshold=tune_threshold, tolerance=tolerance, log = f, model='rfc', div='cross-entropy', num_iter=repetition, rand_seed=25, constraint='meo')
 # ##
 f.write('RFC - CE - sp\n')
-rfc_ce_sp = MP_tol(df, protected_attrs=protected_attrs, label_name=label_name, use_protected = use_protected, use_sample_weight=use_sample_weight, tune_threshold=tune_threshold, tolerance=tolerance, log = f, model='rfc', div='cross-entropy', num_iter=repetition, rand_seed=42, constraint='sp')
+rfc_ce_sp = MP_tol(df, protected_attrs=protected_attrs, label_name=label_name, use_protected = use_protected, use_sample_weight=use_sample_weight, tune_threshold=tune_threshold, tolerance=tolerance, log = f, model='rfc', div='cross-entropy', num_iter=repetition, rand_seed=25, constraint='sp')
 
 
 
