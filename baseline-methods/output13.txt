@@ -1,0 +1,56 @@
+WARNING:root:No module named 'tempeh': LawSchoolGPADataset will be unavailable. To install, run:
+pip install 'aif360[LawSchoolGPA]'
+2023-03-01 10:01:33.225124: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-03-01 10:01:34.029340: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory
+2023-03-01 10:01:34.029409: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory
+2023-03-01 10:01:34.029417: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+#### Data Loaded. 
+Iteration # 0
+Average odds difference:0.4024349320801275
+Overall Test Accuracy:0.6589333333333334
+Overall Test Multiplicity:0.3436
+Time per iteration:13.172761678695679
+----------------------------------------------------------
+Iteration # 1
+Average odds difference:0.35527583138686647
+Overall Test Accuracy:0.6537333333333334
+Overall Test Multiplicity:0.3738666666666667
+Time per iteration:14.330166816711426
+----------------------------------------------------------
+Iteration # 2
+Average odds difference:0.4376852010454296
+Overall Test Accuracy:0.6429333333333334
+Overall Test Multiplicity:0.3389333333333333
+Time per iteration:14.29854440689087
+----------------------------------------------------------
+Iteration # 3
+Average odds difference:0.4111570533880322
+Overall Test Accuracy:0.6496
+Overall Test Multiplicity:0.34453333333333336
+Time per iteration:14.900163173675537
+----------------------------------------------------------
+Iteration # 4
+Average odds difference:0.38338641886533426
+Overall Test Accuracy:0.6504
+Overall Test Multiplicity:0.3526666666666667
+Time per iteration:14.280751943588257
+----------------------------------------------------------
+Iteration # 5
+Average odds difference:0.4063302891501015
+Overall Test Accuracy:0.6548
+Overall Test Multiplicity:0.35546666666666665
+Time per iteration:15.615533113479614
+----------------------------------------------------------
+Iteration # 6
+Average odds difference:0.3571857495730062
+Overall Test Accuracy:0.6546666666666666
+Overall Test Multiplicity:0.3612
+Time per iteration:15.955524682998657
+----------------------------------------------------------
+Iteration # 7
+Average odds difference:0.393046727509892
+Overall Test Accuracy:0.6505333333333333
+Overall Test Multiplicity:0.3469333333333333
+Time per iteration:16.139265775680542
+----------------------------------------------------------

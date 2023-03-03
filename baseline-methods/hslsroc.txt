@@ -1,0 +1,689 @@
+WARNING:root:No module named 'tempeh': LawSchoolGPADataset will be unavailable. To install, run:
+pip install 'aif360[LawSchoolGPA]'
+2023-03-02 23:36:36.936260: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-03-02 23:36:37.686771: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory
+2023-03-02 23:36:37.686841: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory
+2023-03-02 23:36:37.686850: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+#### Data Loaded. 
+## Epsilon =0.001
+Iteration # 0
+Optimal classification threshold (with fairness constraints) = 0.4555
+Optimal ROC margin = 0.0837
+Optimal classification threshold (with fairness constraints) = 0.3961
+Optimal ROC margin = 0.0808
+Optimal classification threshold (with fairness constraints) = 0.4357
+Optimal ROC margin = 0.0889
+Optimal classification threshold (with fairness constraints) = 0.4852
+Optimal ROC margin = 0.0792
+Optimal classification threshold (with fairness constraints) = 0.5148
+Optimal ROC margin = 0.0792
+Optimal classification threshold (with fairness constraints) = 0.3565
+Optimal ROC margin = 0.0582
+Optimal classification threshold (with fairness constraints) = 0.3466
+Optimal ROC margin = 0.0778
+Optimal classification threshold (with fairness constraints) = 0.4654
+Optimal ROC margin = 0.0855
+Optimal classification threshold (with fairness constraints) = 0.5544
+Optimal ROC margin = 0.0727
+Optimal classification threshold (with fairness constraints) = 0.4852
+Optimal ROC margin = 0.0792
+Optimal classification threshold (with fairness constraints) = 0.3862
+Optimal ROC margin = 0.0709
+Optimal classification threshold (with fairness constraints) = 0.4258
+Optimal ROC margin = 0.0782
+Optimal classification threshold (with fairness constraints) = 0.4951
+Optimal ROC margin = 0.0707
+Optimal classification threshold (with fairness constraints) = 0.4456
+Optimal ROC margin = 0.0727
+Optimal classification threshold (with fairness constraints) = 0.4357
+Optimal ROC margin = 0.0800
+Optimal classification threshold (with fairness constraints) = 0.3763
+Optimal ROC margin = 0.0691
+Optimal classification threshold (with fairness constraints) = 0.5544
+Optimal ROC margin = 0.0818
+Optimal classification threshold (with fairness constraints) = 0.4258
+Optimal ROC margin = 0.0782
+Optimal classification threshold (with fairness constraints) = 0.4654
+Optimal ROC margin = 0.0760
+Optimal classification threshold (with fairness constraints) = 0.5247
+Optimal ROC margin = 0.0679
+Optimal classification threshold (with fairness constraints) = 0.5049
+Optimal ROC margin = 0.0909
+Optimal classification threshold (with fairness constraints) = 0.3664
+Optimal ROC margin = 0.0673
+Optimal classification threshold (with fairness constraints) = 0.4159
+Optimal ROC margin = 0.0679
+Optimal classification threshold (with fairness constraints) = 0.7623
+Optimal ROC margin = 0.0534
+Optimal classification threshold (with fairness constraints) = 0.4258
+Optimal ROC margin = 0.0695
+Optimal classification threshold (with fairness constraints) = 0.4258
+Optimal ROC margin = 0.0695
+Average odds difference:0.05140217156443955
+Overall Test Accuracy:0.7152044097381718
+Overall Test Multiplicity:0.6853468075333027
+Time per iteration:211.3541944026947
+----------------------------------------------------------
+Iteration # 1
+Optimal classification threshold (with fairness constraints) = 0.5049
+Optimal ROC margin = 0.0707
+Optimal classification threshold (with fairness constraints) = 0.5346
+Optimal ROC margin = 0.0760
+Optimal classification threshold (with fairness constraints) = 0.5247
+Optimal ROC margin = 0.0776
+Optimal classification threshold (with fairness constraints) = 0.6138
+Optimal ROC margin = 0.0788
+Optimal classification threshold (with fairness constraints) = 0.6831
+Optimal ROC margin = 0.0647
+Optimal classification threshold (with fairness constraints) = 0.4159
+Optimal ROC margin = 0.0679
+Optimal classification threshold (with fairness constraints) = 0.3466
+Optimal ROC margin = 0.0566
+Optimal classification threshold (with fairness constraints) = 0.4654
+Optimal ROC margin = 0.0760
+Optimal classification threshold (with fairness constraints) = 0.3268
+Optimal ROC margin = 0.0533
+Optimal classification threshold (with fairness constraints) = 0.4654
+Optimal ROC margin = 0.0665
+Optimal classification threshold (with fairness constraints) = 0.5445
+Optimal ROC margin = 0.0744
+Optimal classification threshold (with fairness constraints) = 0.4357
+Optimal ROC margin = 0.0622
+Optimal classification threshold (with fairness constraints) = 0.4753
+Optimal ROC margin = 0.0679
+Optimal classification threshold (with fairness constraints) = 0.3367
+Optimal ROC margin = 0.0550
+Optimal classification threshold (with fairness constraints) = 0.5742
+Optimal ROC margin = 0.0782
+Optimal classification threshold (with fairness constraints) = 0.3763
+Optimal ROC margin = 0.0538
+Optimal classification threshold (with fairness constraints) = 0.4951
+Optimal ROC margin = 0.0707
+Optimal classification threshold (with fairness constraints) = 0.4159
+Optimal ROC margin = 0.0679
+Optimal classification threshold (with fairness constraints) = 0.4258
+Optimal ROC margin = 0.0695
+Optimal classification threshold (with fairness constraints) = 0.4753
+Optimal ROC margin = 0.0679
+Optimal classification threshold (with fairness constraints) = 0.5841
+Optimal ROC margin = 0.0764
+Optimal classification threshold (with fairness constraints) = 0.3961
+Optimal ROC margin = 0.0647
+Optimal classification threshold (with fairness constraints) = 0.4555
+Optimal ROC margin = 0.0651
+Optimal classification threshold (with fairness constraints) = 0.4258
+Optimal ROC margin = 0.0695
+Optimal classification threshold (with fairness constraints) = 0.4456
+Optimal ROC margin = 0.0818
+Optimal classification threshold (with fairness constraints) = 0.3367
+Optimal ROC margin = 0.0481
+Average odds difference:0.02734997732547889
+Overall Test Accuracy:0.684887459807074
+Overall Test Multiplicity:0.6568672485071199
+Time per iteration:207.68196606636047
+----------------------------------------------------------
+Iteration # 2
+Optimal classification threshold (with fairness constraints) = 0.5742
+Optimal ROC margin = 0.0521
+Optimal classification threshold (with fairness constraints) = 0.6336
+Optimal ROC margin = 0.0523
+Optimal classification threshold (with fairness constraints) = 0.5544
+Optimal ROC margin = 0.0637
+Optimal classification threshold (with fairness constraints) = 0.5247
+Optimal ROC margin = 0.0485
+Optimal classification threshold (with fairness constraints) = 0.7029
+Optimal ROC margin = 0.0606
+Optimal classification threshold (with fairness constraints) = 0.4456
+Optimal ROC margin = 0.0455
+Optimal classification threshold (with fairness constraints) = 0.5148
+Optimal ROC margin = 0.0396
+Optimal classification threshold (with fairness constraints) = 0.4654
+Optimal ROC margin = 0.0570
+Optimal classification threshold (with fairness constraints) = 0.5643
+Optimal ROC margin = 0.0533
+Optimal classification threshold (with fairness constraints) = 0.4258
+Optimal ROC margin = 0.0348
+Optimal classification threshold (with fairness constraints) = 0.5148
+Optimal ROC margin = 0.0594
+Optimal classification threshold (with fairness constraints) = 0.4456
+Optimal ROC margin = 0.0546
+Optimal classification threshold (with fairness constraints) = 0.4654
+Optimal ROC margin = 0.0570
+Optimal classification threshold (with fairness constraints) = 0.6435
+Optimal ROC margin = 0.0582
+Optimal classification threshold (with fairness constraints) = 0.3961
+Optimal ROC margin = 0.0485
+Optimal classification threshold (with fairness constraints) = 0.6237
+Optimal ROC margin = 0.0461
+Optimal classification threshold (with fairness constraints) = 0.5049
+Optimal ROC margin = 0.0505
+Optimal classification threshold (with fairness constraints) = 0.4654
+Optimal ROC margin = 0.0475
+Optimal classification threshold (with fairness constraints) = 0.4852
+Optimal ROC margin = 0.0495
+Optimal classification threshold (with fairness constraints) = 0.5247
+Optimal ROC margin = 0.0485
+Optimal classification threshold (with fairness constraints) = 0.5742
+Optimal ROC margin = 0.0608
+Optimal classification threshold (with fairness constraints) = 0.3466
+Optimal ROC margin = 0.0354
+Optimal classification threshold (with fairness constraints) = 0.5247
+Optimal ROC margin = 0.0485
+Optimal classification threshold (with fairness constraints) = 0.4753
+Optimal ROC margin = 0.0485
+Optimal classification threshold (with fairness constraints) = 0.3664
+Optimal ROC margin = 0.0449
+Optimal classification threshold (with fairness constraints) = 0.5544
+Optimal ROC margin = 0.0546
+Average odds difference:0.003911672286530138
+Overall Test Accuracy:0.7308222324299495
+Overall Test Multiplicity:0.6334405144694534
+Time per iteration:212.48265862464905
+----------------------------------------------------------
+Iteration # 3
+Optimal classification threshold (with fairness constraints) = 0.4654
+Optimal ROC margin = 0.0665
+Optimal classification threshold (with fairness constraints) = 0.7326
+Optimal ROC margin = 0.0655
+Optimal classification threshold (with fairness constraints) = 0.5148
+Optimal ROC margin = 0.0792
+Optimal classification threshold (with fairness constraints) = 0.5841
+Optimal ROC margin = 0.0679
+Optimal classification threshold (with fairness constraints) = 0.3961
+Optimal ROC margin = 0.0647
+Optimal classification threshold (with fairness constraints) = 0.5049
+Optimal ROC margin = 0.0606
+Optimal classification threshold (with fairness constraints) = 0.4060
+Optimal ROC margin = 0.0663
+Optimal classification threshold (with fairness constraints) = 0.5742
+Optimal ROC margin = 0.0782
+Optimal classification threshold (with fairness constraints) = 0.2476
+Optimal ROC margin = 0.0404
+Optimal classification threshold (with fairness constraints) = 0.4159
+Optimal ROC margin = 0.0764
+Optimal classification threshold (with fairness constraints) = 0.4357
+Optimal ROC margin = 0.0622
+Optimal classification threshold (with fairness constraints) = 0.5643
+Optimal ROC margin = 0.0711
+Optimal classification threshold (with fairness constraints) = 0.4951
+Optimal ROC margin = 0.0606
+Optimal classification threshold (with fairness constraints) = 0.4357
+Optimal ROC margin = 0.0711
+Optimal classification threshold (with fairness constraints) = 0.6633
+Optimal ROC margin = 0.0687
+Optimal classification threshold (with fairness constraints) = 0.4951
+Optimal ROC margin = 0.0606
+Optimal classification threshold (with fairness constraints) = 0.3268
+Optimal ROC margin = 0.0533
+Optimal classification threshold (with fairness constraints) = 0.4852
+Optimal ROC margin = 0.0693
+Optimal classification threshold (with fairness constraints) = 0.4753
+Optimal ROC margin = 0.0776
+Optimal classification threshold (with fairness constraints) = 0.5643
+Optimal ROC margin = 0.0800
+Optimal classification threshold (with fairness constraints) = 0.5247
+Optimal ROC margin = 0.0582
+Optimal classification threshold (with fairness constraints) = 0.3268
+Optimal ROC margin = 0.0533
+Optimal classification threshold (with fairness constraints) = 0.3664
+Optimal ROC margin = 0.0598
+Optimal classification threshold (with fairness constraints) = 0.5049
+Optimal ROC margin = 0.0707
+Optimal classification threshold (with fairness constraints) = 0.4852
+Optimal ROC margin = 0.0693
+Optimal classification threshold (with fairness constraints) = 0.5049
+Optimal ROC margin = 0.0606
+Average odds difference:0.012708378216067864
+Overall Test Accuracy:0.7216352779053744
+Overall Test Multiplicity:0.7257694074414331
+Time per iteration:212.56701159477234
+----------------------------------------------------------
+Iteration # 4
+Optimal classification threshold (with fairness constraints) = 0.4357
+Optimal ROC margin = 0.0533
+Optimal classification threshold (with fairness constraints) = 0.5346
+Optimal ROC margin = 0.0570
+Optimal classification threshold (with fairness constraints) = 0.5247
+Optimal ROC margin = 0.0582
+Optimal classification threshold (with fairness constraints) = 0.7029
+Optimal ROC margin = 0.0606
+Optimal classification threshold (with fairness constraints) = 0.4852
+Optimal ROC margin = 0.0495
+Optimal classification threshold (with fairness constraints) = 0.5049
+Optimal ROC margin = 0.0606
+Optimal classification threshold (with fairness constraints) = 0.5049
+Optimal ROC margin = 0.0606
+Optimal classification threshold (with fairness constraints) = 0.6930
+Optimal ROC margin = 0.0501
+Optimal classification threshold (with fairness constraints) = 0.4555
+Optimal ROC margin = 0.0465
+Optimal classification threshold (with fairness constraints) = 0.5346
+Optimal ROC margin = 0.0665
+Optimal classification threshold (with fairness constraints) = 0.6039
+Optimal ROC margin = 0.0485
+Optimal classification threshold (with fairness constraints) = 0.5049
+Optimal ROC margin = 0.0606
+Optimal classification threshold (with fairness constraints) = 0.5544
+Optimal ROC margin = 0.0546
+Optimal classification threshold (with fairness constraints) = 0.6138
+Optimal ROC margin = 0.0473
+Optimal classification threshold (with fairness constraints) = 0.5742
+Optimal ROC margin = 0.0608
+Optimal classification threshold (with fairness constraints) = 0.7029
+Optimal ROC margin = 0.0546
+Optimal classification threshold (with fairness constraints) = 0.6534
+Optimal ROC margin = 0.0495
+Optimal classification threshold (with fairness constraints) = 0.5445
+Optimal ROC margin = 0.0558
+Optimal classification threshold (with fairness constraints) = 0.3664
+Optimal ROC margin = 0.0523
+Optimal classification threshold (with fairness constraints) = 0.4555
+Optimal ROC margin = 0.0558
+Optimal classification threshold (with fairness constraints) = 0.4951
+Optimal ROC margin = 0.0606
+Optimal classification threshold (with fairness constraints) = 0.3169
+Optimal ROC margin = 0.0453
+Optimal classification threshold (with fairness constraints) = 0.5346
+Optimal ROC margin = 0.0570
+Optimal classification threshold (with fairness constraints) = 0.5049
+Optimal ROC margin = 0.0505
+Optimal classification threshold (with fairness constraints) = 0.4357
+Optimal ROC margin = 0.0533
+Optimal classification threshold (with fairness constraints) = 0.4258
+Optimal ROC margin = 0.0434
+Average odds difference:0.04292554990928646
+Overall Test Accuracy:0.7349563619660082
+Overall Test Multiplicity:0.66789159393661
+Time per iteration:218.25389528274536
+----------------------------------------------------------
+Iteration # 5
+Optimal classification threshold (with fairness constraints) = 0.4357
+Optimal ROC margin = 0.0622
+Optimal classification threshold (with fairness constraints) = 0.5445
+Optimal ROC margin = 0.0558
+Optimal classification threshold (with fairness constraints) = 0.5247
+Optimal ROC margin = 0.0582
+Optimal classification threshold (with fairness constraints) = 0.4357
+Optimal ROC margin = 0.0622
+Optimal classification threshold (with fairness constraints) = 0.4357
+Optimal ROC margin = 0.0533
+Optimal classification threshold (with fairness constraints) = 0.3961
+Optimal ROC margin = 0.0485
+Optimal classification threshold (with fairness constraints) = 0.5346
+Optimal ROC margin = 0.0570
+Optimal classification threshold (with fairness constraints) = 0.6435
+Optimal ROC margin = 0.0509
+Optimal classification threshold (with fairness constraints) = 0.4456
+Optimal ROC margin = 0.0546
+Optimal classification threshold (with fairness constraints) = 0.4852
+Optimal ROC margin = 0.0594
+Optimal classification threshold (with fairness constraints) = 0.4654
+Optimal ROC margin = 0.0475
+Optimal classification threshold (with fairness constraints) = 0.3664
+Optimal ROC margin = 0.0449
+Optimal classification threshold (with fairness constraints) = 0.5445
+Optimal ROC margin = 0.0465
+Optimal classification threshold (with fairness constraints) = 0.4357
+Optimal ROC margin = 0.0445
+Optimal classification threshold (with fairness constraints) = 0.5643
+Optimal ROC margin = 0.0533
+Optimal classification threshold (with fairness constraints) = 0.4654
+Optimal ROC margin = 0.0665
+Optimal classification threshold (with fairness constraints) = 0.5247
+Optimal ROC margin = 0.0485
+Optimal classification threshold (with fairness constraints) = 0.4060
+Optimal ROC margin = 0.0497
+Optimal classification threshold (with fairness constraints) = 0.3664
+Optimal ROC margin = 0.0449
+Optimal classification threshold (with fairness constraints) = 0.5049
+Optimal ROC margin = 0.0606
+Optimal classification threshold (with fairness constraints) = 0.4357
+Optimal ROC margin = 0.0533
+Optimal classification threshold (with fairness constraints) = 0.6039
+Optimal ROC margin = 0.0647
+Optimal classification threshold (with fairness constraints) = 0.4951
+Optimal ROC margin = 0.0505
+Optimal classification threshold (with fairness constraints) = 0.5742
+Optimal ROC margin = 0.0521
+Optimal classification threshold (with fairness constraints) = 0.3466
+Optimal ROC margin = 0.0424
+Optimal classification threshold (with fairness constraints) = 0.4555
+Optimal ROC margin = 0.0558
+Average odds difference:0.03491319631266909
+Overall Test Accuracy:0.7266881028938906
+Overall Test Multiplicity:0.6150666054203031
+Time per iteration:246.41423892974854
+----------------------------------------------------------
+Iteration # 6
+Optimal classification threshold (with fairness constraints) = 0.4852
+Optimal ROC margin = 0.0495
+Optimal classification threshold (with fairness constraints) = 0.4951
+Optimal ROC margin = 0.0404
+Optimal classification threshold (with fairness constraints) = 0.6732
+Optimal ROC margin = 0.0734
+Optimal classification threshold (with fairness constraints) = 0.5643
+Optimal ROC margin = 0.0533
+Optimal classification threshold (with fairness constraints) = 0.5049
+Optimal ROC margin = 0.0606
+Optimal classification threshold (with fairness constraints) = 0.5445
+Optimal ROC margin = 0.0558
+Optimal classification threshold (with fairness constraints) = 0.3367
+Optimal ROC margin = 0.0481
+Optimal classification threshold (with fairness constraints) = 0.4159
+Optimal ROC margin = 0.0509
+Optimal classification threshold (with fairness constraints) = 0.2872
+Optimal ROC margin = 0.0352
+Optimal classification threshold (with fairness constraints) = 0.5445
+Optimal ROC margin = 0.0558
+Optimal classification threshold (with fairness constraints) = 0.4753
+Optimal ROC margin = 0.0485
+Optimal classification threshold (with fairness constraints) = 0.4456
+Optimal ROC margin = 0.0455
+Optimal classification threshold (with fairness constraints) = 0.2575
+Optimal ROC margin = 0.0315
+Optimal classification threshold (with fairness constraints) = 0.3070
+Optimal ROC margin = 0.0501
+Optimal classification threshold (with fairness constraints) = 0.4060
+Optimal ROC margin = 0.0497
+Optimal classification threshold (with fairness constraints) = 0.4753
+Optimal ROC margin = 0.0485
+Optimal classification threshold (with fairness constraints) = 0.5049
+Optimal ROC margin = 0.0606
+Optimal classification threshold (with fairness constraints) = 0.4357
+Optimal ROC margin = 0.0622
+Optimal classification threshold (with fairness constraints) = 0.4456
+Optimal ROC margin = 0.0546
+Optimal classification threshold (with fairness constraints) = 0.5742
+Optimal ROC margin = 0.0695
+Optimal classification threshold (with fairness constraints) = 0.4357
+Optimal ROC margin = 0.0533
+Optimal classification threshold (with fairness constraints) = 0.6237
+Optimal ROC margin = 0.0538
+Optimal classification threshold (with fairness constraints) = 0.5247
+Optimal ROC margin = 0.0485
+Optimal classification threshold (with fairness constraints) = 0.3862
+Optimal ROC margin = 0.0473
+Optimal classification threshold (with fairness constraints) = 0.3862
+Optimal ROC margin = 0.0394
+Optimal classification threshold (with fairness constraints) = 0.4456
+Optimal ROC margin = 0.0455
+Average odds difference:0.02900335260828582
+Overall Test Accuracy:0.733578318787322
+Overall Test Multiplicity:0.6706476802939826
+Time per iteration:236.35558533668518
+----------------------------------------------------------
+Iteration # 7
+Optimal classification threshold (with fairness constraints) = 0.5841
+Optimal ROC margin = 0.0509
+Optimal classification threshold (with fairness constraints) = 0.4357
+Optimal ROC margin = 0.0445
+Optimal classification threshold (with fairness constraints) = 0.3763
+Optimal ROC margin = 0.0384
+Optimal classification threshold (with fairness constraints) = 0.3961
+Optimal ROC margin = 0.0404
+Optimal classification threshold (with fairness constraints) = 0.7425
+Optimal ROC margin = 0.0315
+Optimal classification threshold (with fairness constraints) = 0.5544
+Optimal ROC margin = 0.0455
+Optimal classification threshold (with fairness constraints) = 0.4753
+Optimal ROC margin = 0.0582
+Optimal classification threshold (with fairness constraints) = 0.5742
+Optimal ROC margin = 0.0434
+Optimal classification threshold (with fairness constraints) = 0.5544
+Optimal ROC margin = 0.0546
+Optimal classification threshold (with fairness constraints) = 0.6237
+Optimal ROC margin = 0.0384
+Optimal classification threshold (with fairness constraints) = 0.6138
+Optimal ROC margin = 0.0473
+Optimal classification threshold (with fairness constraints) = 0.3268
+Optimal ROC margin = 0.0400
+Optimal classification threshold (with fairness constraints) = 0.4258
+Optimal ROC margin = 0.0434
+Optimal classification threshold (with fairness constraints) = 0.5148
+Optimal ROC margin = 0.0495
+Optimal classification threshold (with fairness constraints) = 0.5049
+Optimal ROC margin = 0.0404
+Optimal classification threshold (with fairness constraints) = 0.4852
+Optimal ROC margin = 0.0495
+Optimal classification threshold (with fairness constraints) = 0.4852
+Optimal ROC margin = 0.0396
+Optimal classification threshold (with fairness constraints) = 0.4258
+Optimal ROC margin = 0.0434
+Optimal classification threshold (with fairness constraints) = 0.4357
+Optimal ROC margin = 0.0533
+Optimal classification threshold (with fairness constraints) = 0.4753
+Optimal ROC margin = 0.0485
+Optimal classification threshold (with fairness constraints) = 0.5049
+Optimal ROC margin = 0.0404
+Optimal classification threshold (with fairness constraints) = 0.5049
+Optimal ROC margin = 0.0404
+Optimal classification threshold (with fairness constraints) = 0.3763
+Optimal ROC margin = 0.0384
+Optimal classification threshold (with fairness constraints) = 0.5742
+Optimal ROC margin = 0.0521
+Optimal classification threshold (with fairness constraints) = 0.4357
+Optimal ROC margin = 0.0356
+Optimal classification threshold (with fairness constraints) = 0.5445
+Optimal ROC margin = 0.0372
+Average odds difference:0.061943742203613525
+Overall Test Accuracy:0.7216352779053744
+Overall Test Multiplicity:0.6596233348644924
+Time per iteration:312.75587725639343
+----------------------------------------------------------
+## Epsilon =0.005
+Iteration # 0
+Optimal classification threshold (with fairness constraints) = 0.4357
+Optimal ROC margin = 0.0800
+Optimal classification threshold (with fairness constraints) = 0.5049
+Optimal ROC margin = 0.0808
+Optimal classification threshold (with fairness constraints) = 0.4357
+Optimal ROC margin = 0.0889
+Optimal classification threshold (with fairness constraints) = 0.4852
+Optimal ROC margin = 0.0792
+Optimal classification threshold (with fairness constraints) = 0.5148
+Optimal ROC margin = 0.0792
+Optimal classification threshold (with fairness constraints) = 0.4852
+Optimal ROC margin = 0.0693
+Optimal classification threshold (with fairness constraints) = 0.4555
+Optimal ROC margin = 0.0837
+Optimal classification threshold (with fairness constraints) = 0.4258
+Optimal ROC margin = 0.0782
+Optimal classification threshold (with fairness constraints) = 0.5049
+Optimal ROC margin = 0.0707
+Optimal classification threshold (with fairness constraints) = 0.4852
+Optimal ROC margin = 0.0792
+Optimal classification threshold (with fairness constraints) = 0.5049
+Optimal ROC margin = 0.0808
+Optimal classification threshold (with fairness constraints) = 0.5148
+Optimal ROC margin = 0.0792
+Optimal classification threshold (with fairness constraints) = 0.4951
+Optimal ROC margin = 0.0707
+Optimal classification threshold (with fairness constraints) = 0.4753
+Optimal ROC margin = 0.0776
+Optimal classification threshold (with fairness constraints) = 0.4357
+Optimal ROC margin = 0.0800
+Optimal classification threshold (with fairness constraints) = 0.4555
+Optimal ROC margin = 0.0744
+Optimal classification threshold (with fairness constraints) = 0.5247
+Optimal ROC margin = 0.0776
+Optimal classification threshold (with fairness constraints) = 0.4258
+Optimal ROC margin = 0.0782
+Optimal classification threshold (with fairness constraints) = 0.5445
+Optimal ROC margin = 0.0744
+Optimal classification threshold (with fairness constraints) = 0.5445
+Optimal ROC margin = 0.0651
+Optimal classification threshold (with fairness constraints) = 0.4753
+Optimal ROC margin = 0.0873
+Optimal classification threshold (with fairness constraints) = 0.4555
+Optimal ROC margin = 0.0837
+Optimal classification threshold (with fairness constraints) = 0.4951
+Optimal ROC margin = 0.0707
+Optimal classification threshold (with fairness constraints) = 0.4654
+Optimal ROC margin = 0.0760
+Optimal classification threshold (with fairness constraints) = 0.4654
+Optimal ROC margin = 0.0760
+Optimal classification threshold (with fairness constraints) = 0.4753
+Optimal ROC margin = 0.0776
+Average odds difference:0.07611640411067874
+Overall Test Accuracy:0.7175011483693156
+Overall Test Multiplicity:0.5062011943040882
+Time per iteration:238.6292588710785
+----------------------------------------------------------
+Iteration # 1
+Optimal classification threshold (with fairness constraints) = 0.4852
+Optimal ROC margin = 0.0693
+Optimal classification threshold (with fairness constraints) = 0.4654
+Optimal ROC margin = 0.0665
+Optimal classification threshold (with fairness constraints) = 0.5247
+Optimal ROC margin = 0.0776
+Optimal classification threshold (with fairness constraints) = 0.4852
+Optimal ROC margin = 0.0693
+Optimal classification threshold (with fairness constraints) = 0.4456
+Optimal ROC margin = 0.0637
+Optimal classification threshold (with fairness constraints) = 0.4951
+Optimal ROC margin = 0.0707
+Optimal classification threshold (with fairness constraints) = 0.4852
+Optimal ROC margin = 0.0792
+Optimal classification threshold (with fairness constraints) = 0.4555
+Optimal ROC margin = 0.0744
+Optimal classification threshold (with fairness constraints) = 0.4852
+Optimal ROC margin = 0.0693
+Optimal classification threshold (with fairness constraints) = 0.4753
+Optimal ROC margin = 0.0679
+Optimal classification threshold (with fairness constraints) = 0.5148
+Optimal ROC margin = 0.0693
+Optimal classification threshold (with fairness constraints) = 0.5049
+Optimal ROC margin = 0.0707
+Optimal classification threshold (with fairness constraints) = 0.4654
+Optimal ROC margin = 0.0665
+Optimal classification threshold (with fairness constraints) = 0.4456
+Optimal ROC margin = 0.0727
+Optimal classification threshold (with fairness constraints) = 0.4357
+Optimal ROC margin = 0.0533
+Optimal classification threshold (with fairness constraints) = 0.4357
+Optimal ROC margin = 0.0622
+Optimal classification threshold (with fairness constraints) = 0.4951
+Optimal ROC margin = 0.0707
+Optimal classification threshold (with fairness constraints) = 0.4159
+Optimal ROC margin = 0.0679
+Optimal classification threshold (with fairness constraints) = 0.4258
+Optimal ROC margin = 0.0695
+Optimal classification threshold (with fairness constraints) = 0.4753
+Optimal ROC margin = 0.0679
+Optimal classification threshold (with fairness constraints) = 0.4951
+Optimal ROC margin = 0.0707
+Optimal classification threshold (with fairness constraints) = 0.4159
+Optimal ROC margin = 0.0679
+Optimal classification threshold (with fairness constraints) = 0.5148
+Optimal ROC margin = 0.0693
+Optimal classification threshold (with fairness constraints) = 0.4456
+Optimal ROC margin = 0.0727
+Optimal classification threshold (with fairness constraints) = 0.4456
+Optimal ROC margin = 0.0818
+Optimal classification threshold (with fairness constraints) = 0.4258
+Optimal ROC margin = 0.0608
+Average odds difference:0.00834723925613634
+Overall Test Accuracy:0.7161231051906293
+Overall Test Multiplicity:0.5016077170418006
+Time per iteration:317.285249710083
+----------------------------------------------------------
+Iteration # 2
+Optimal classification threshold (with fairness constraints) = 0.5148
+Optimal ROC margin = 0.0495
+Optimal classification threshold (with fairness constraints) = 0.4852
+Optimal ROC margin = 0.0495
+Optimal classification threshold (with fairness constraints) = 0.4852
+Optimal ROC margin = 0.0495
+Optimal classification threshold (with fairness constraints) = 0.5148
+Optimal ROC margin = 0.0495
+Optimal classification threshold (with fairness constraints) = 0.5247
+Optimal ROC margin = 0.0582
+Optimal classification threshold (with fairness constraints) = 0.5346
+Optimal ROC margin = 0.0475
+Optimal classification threshold (with fairness constraints) = 0.4852
+Optimal ROC margin = 0.0396
+Optimal classification threshold (with fairness constraints) = 0.4753
+Optimal ROC margin = 0.0582
+Optimal classification threshold (with fairness constraints) = 0.4951
+Optimal ROC margin = 0.0505
+Optimal classification threshold (with fairness constraints) = 0.5544
+Optimal ROC margin = 0.0546
+Optimal classification threshold (with fairness constraints) = 0.5049
+Optimal ROC margin = 0.0606
+Optimal classification threshold (with fairness constraints) = 0.4753
+Optimal ROC margin = 0.0582
+Optimal classification threshold (with fairness constraints) = 0.4357
+Optimal ROC margin = 0.0533
+Optimal classification threshold (with fairness constraints) = 0.5346
+Optimal ROC margin = 0.0475
+Optimal classification threshold (with fairness constraints) = 0.5544
+Optimal ROC margin = 0.0455
+Optimal classification threshold (with fairness constraints) = 0.5148
+Optimal ROC margin = 0.0396
+Optimal classification threshold (with fairness constraints) = 0.4951
+Optimal ROC margin = 0.0505
+Optimal classification threshold (with fairness constraints) = 0.5049
+Optimal ROC margin = 0.0505
+Optimal classification threshold (with fairness constraints) = 0.5148
+Optimal ROC margin = 0.0495
+Optimal classification threshold (with fairness constraints) = 0.5247
+Optimal ROC margin = 0.0485
+Optimal classification threshold (with fairness constraints) = 0.4555
+Optimal ROC margin = 0.0465
+Optimal classification threshold (with fairness constraints) = 0.4753
+Optimal ROC margin = 0.0485
+Optimal classification threshold (with fairness constraints) = 0.4654
+Optimal ROC margin = 0.0380
+Optimal classification threshold (with fairness constraints) = 0.5049
+Optimal ROC margin = 0.0505
+Optimal classification threshold (with fairness constraints) = 0.5247
+Optimal ROC margin = 0.0582
+Optimal classification threshold (with fairness constraints) = 0.5148
+Optimal ROC margin = 0.0495
+Average odds difference:0.014227460127164443
+Overall Test Accuracy:0.7367937528709233
+Overall Test Multiplicity:0.4818557648139642
+Time per iteration:219.0510184764862
+----------------------------------------------------------
+Iteration # 3
+Optimal classification threshold (with fairness constraints) = 0.5049
+Optimal ROC margin = 0.0707
+Optimal classification threshold (with fairness constraints) = 0.4852
+Optimal ROC margin = 0.0693
+Optimal classification threshold (with fairness constraints) = 0.5148
+Optimal ROC margin = 0.0792
+Optimal classification threshold (with fairness constraints) = 0.5148
+Optimal ROC margin = 0.0693
+Optimal classification threshold (with fairness constraints) = 0.4951
+Optimal ROC margin = 0.0707
+Optimal classification threshold (with fairness constraints) = 0.4951
+Optimal ROC margin = 0.0606
+Optimal classification threshold (with fairness constraints) = 0.4258
+Optimal ROC margin = 0.0695
+Optimal classification threshold (with fairness constraints) = 0.4258
+Optimal ROC margin = 0.0695
+Optimal classification threshold (with fairness constraints) = 0.5643
+Optimal ROC margin = 0.0711
+Optimal classification threshold (with fairness constraints) = 0.5346
+Optimal ROC margin = 0.0760
+Optimal classification threshold (with fairness constraints) = 0.4357
+Optimal ROC margin = 0.0622
+Optimal classification threshold (with fairness constraints) = 0.5148
+Optimal ROC margin = 0.0693
+Optimal classification threshold (with fairness constraints) = 0.4555
+Optimal ROC margin = 0.0558
+Optimal classification threshold (with fairness constraints) = 0.5247
+Optimal ROC margin = 0.0776
+Optimal classification threshold (with fairness constraints) = 0.5148
+Optimal ROC margin = 0.0693
+Optimal classification threshold (with fairness constraints) = 0.4456
+Optimal ROC margin = 0.0546
+Optimal classification threshold (with fairness constraints) = 0.4951
+Optimal ROC margin = 0.0606
+Optimal classification threshold (with fairness constraints) = 0.4852
+Optimal ROC margin = 0.0693
+Optimal classification threshold (with fairness constraints) = 0.4753
+Optimal ROC margin = 0.0776
+Optimal classification threshold (with fairness constraints) = 0.4357
+Optimal ROC margin = 0.0711

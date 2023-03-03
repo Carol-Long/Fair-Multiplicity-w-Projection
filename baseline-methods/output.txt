@@ -1,0 +1,317 @@
+WARNING:root:No module named 'tempeh': LawSchoolGPADataset will be unavailable. To install, run:
+pip install 'aif360[LawSchoolGPA]'
+WARNING:root:No module named 'tensorflow': AdversarialDebiasing will be unavailable. To install, run:
+pip install 'aif360[AdversarialDebiasing]'
+WARNING:root:No module named 'tensorflow': AdversarialDebiasing will be unavailable. To install, run:
+pip install 'aif360[AdversarialDebiasing]'
+#### Data Loaded. 
+## Epsilon =0.001
+Iteration # 0
+Average odds difference:0.052452501969759924
+Overall Test Accuracy:0.6540404040404041
+Overall Test Multiplicity:0.35795454545454547
+Time per iteration:161.36167311668396
+----------------------------------------------------------
+Iteration # 1
+Average odds difference:0.020682159574792996
+Overall Test Accuracy:0.6268939393939394
+Overall Test Multiplicity:0.3661616161616162
+Time per iteration:176.68582701683044
+----------------------------------------------------------
+Iteration # 2
+Average odds difference:0.007482818220306248
+Overall Test Accuracy:0.6281565656565656
+Overall Test Multiplicity:0.5422979797979798
+Time per iteration:181.92432737350464
+----------------------------------------------------------
+Iteration # 3
+Average odds difference:0.007218595538267675
+Overall Test Accuracy:0.6407828282828283
+Overall Test Multiplicity:0.4797979797979798
+Time per iteration:191.11770009994507
+----------------------------------------------------------
+Iteration # 4
+Average odds difference:0.043472413831969564
+Overall Test Accuracy:0.6237373737373737
+Overall Test Multiplicity:0.47664141414141414
+Time per iteration:198.19458198547363
+----------------------------------------------------------
+## Epsilon =0.005
+Iteration # 0
+Average odds difference:0.06582706089299054
+Overall Test Accuracy:0.6338383838383839
+Overall Test Multiplicity:0.38446969696969696
+Time per iteration:161.23598337173462
+----------------------------------------------------------
+Iteration # 1
+Average odds difference:0.025475796643818965
+Overall Test Accuracy:0.6483585858585859
+Overall Test Multiplicity:0.38825757575757575
+Time per iteration:176.56430840492249
+----------------------------------------------------------
+Iteration # 2
+Average odds difference:0.0028702234893999423
+Overall Test Accuracy:0.6275252525252525
+Overall Test Multiplicity:0.5441919191919192
+Time per iteration:182.3882293701172
+----------------------------------------------------------
+Iteration # 3
+Average odds difference:0.031933635519701103
+Overall Test Accuracy:0.634469696969697
+Overall Test Multiplicity:0.5082070707070707
+Time per iteration:220.9386134147644
+----------------------------------------------------------
+Iteration # 4
+Average odds difference:0.043847619530668874
+Overall Test Accuracy:0.625
+Overall Test Multiplicity:0.3592171717171717
+Time per iteration:168.28395867347717
+----------------------------------------------------------
+## Epsilon =0.01
+Iteration # 0
+Average odds difference:0.018239270562504073
+Overall Test Accuracy:0.6414141414141414
+Overall Test Multiplicity:0.3667929292929293
+Time per iteration:160.48551273345947
+----------------------------------------------------------
+Iteration # 1
+Average odds difference:0.027949088746754003
+Overall Test Accuracy:0.6470959595959596
+Overall Test Multiplicity:0.36363636363636365
+Time per iteration:175.87908029556274
+----------------------------------------------------------
+Iteration # 2
+Average odds difference:0.011769491641545615
+Overall Test Accuracy:0.6401515151515151
+Overall Test Multiplicity:0.43308080808080807
+Time per iteration:167.11513566970825
+----------------------------------------------------------
+Iteration # 3
+Average odds difference:0.018358205448369386
+Overall Test Accuracy:0.6382575757575758
+Overall Test Multiplicity:0.509469696969697
+Time per iteration:189.72268104553223
+----------------------------------------------------------
+Iteration # 4
+Average odds difference:0.04904623994048826
+Overall Test Accuracy:0.6268939393939394
+Overall Test Multiplicity:0.3630050505050505
+Time per iteration:167.7984118461609
+----------------------------------------------------------
+## Epsilon =0.02
+Iteration # 0
+Average odds difference:0.036917984162329415
+Overall Test Accuracy:0.6407828282828283
+Overall Test Multiplicity:0.35858585858585856
+Time per iteration:160.25349140167236
+----------------------------------------------------------
+Iteration # 1
+Average odds difference:0.007468640706393109
+Overall Test Accuracy:0.6470959595959596
+Overall Test Multiplicity:0.24936868686868688
+Time per iteration:222.30121040344238
+----------------------------------------------------------
+Iteration # 2
+Average odds difference:0.004426715520936569
+Overall Test Accuracy:0.6388888888888888
+Overall Test Multiplicity:0.5359848484848485
+Time per iteration:181.91617798805237
+----------------------------------------------------------
+Iteration # 3
+Average odds difference:0.020370283792414984
+Overall Test Accuracy:0.625
+Overall Test Multiplicity:0.5075757575757576
+Time per iteration:222.6968057155609
+----------------------------------------------------------
+Iteration # 4
+Average odds difference:0.034466845878136226
+Overall Test Accuracy:0.6414141414141414
+Overall Test Multiplicity:0.3648989898989899
+Time per iteration:167.9562373161316
+----------------------------------------------------------
+## Epsilon =0.05
+Iteration # 0
+Average odds difference:0.05726961402673192
+Overall Test Accuracy:0.6414141414141414
+Overall Test Multiplicity:0.3213383838383838
+Time per iteration:160.80344676971436
+----------------------------------------------------------
+Iteration # 1
+Average odds difference:0.01771312086147006
+Overall Test Accuracy:0.6502525252525253
+Overall Test Multiplicity:0.31313131313131315
+Time per iteration:153.53971004486084
+----------------------------------------------------------
+Iteration # 2
+Average odds difference:0.004433900489069692
+Overall Test Accuracy:0.6414141414141414
+Overall Test Multiplicity:0.5593434343434344
+Time per iteration:174.14736819267273
+----------------------------------------------------------
+Iteration # 3
+Average odds difference:0.01406234715660945
+Overall Test Accuracy:0.6433080808080808
+Overall Test Multiplicity:0.48295454545454547
+Time per iteration:190.7174391746521
+----------------------------------------------------------
+Iteration # 4
+Average odds difference:0.001491828407835738
+Overall Test Accuracy:0.6281565656565656
+Overall Test Multiplicity:0.476010101010101
+Time per iteration:198.8828866481781
+----------------------------------------------------------
+## Epsilon =0.1
+Iteration # 0
+Average odds difference:0.04907247065602799
+Overall Test Accuracy:0.6376262626262627
+Overall Test Multiplicity:0.3434343434343434
+Time per iteration:152.29428005218506
+----------------------------------------------------------
+Iteration # 1
+Average odds difference:0.012649167111952908
+Overall Test Accuracy:0.6521464646464646
+Overall Test Multiplicity:0.3371212121212121
+Time per iteration:231.0347936153412
+----------------------------------------------------------
+Iteration # 2
+Average odds difference:0.008980768791590238
+Overall Test Accuracy:0.6534090909090909
+Overall Test Multiplicity:0.5486111111111112
+Time per iteration:175.44112133979797
+----------------------------------------------------------
+Iteration # 3
+Average odds difference:0.024301212006130085
+Overall Test Accuracy:0.6433080808080808
+Overall Test Multiplicity:0.5334595959595959
+Time per iteration:160.18204474449158
+----------------------------------------------------------
+Iteration # 4
+Average odds difference:0.030998748901061773
+Overall Test Accuracy:0.6325757575757576
+Overall Test Multiplicity:0.44191919191919193
+Time per iteration:197.94843411445618
+----------------------------------------------------------
+## Epsilon =0.2
+Iteration # 0
+Average odds difference:0.033052939273142456
+Overall Test Accuracy:0.6332070707070707
+Overall Test Multiplicity:0.351010101010101
+Time per iteration:152.69297742843628
+----------------------------------------------------------
+Iteration # 1
+Average odds difference:0.02385287341651554
+Overall Test Accuracy:0.6679292929292929
+Overall Test Multiplicity:0.28535353535353536
+Time per iteration:154.44343256950378
+----------------------------------------------------------
+Iteration # 2
+Average odds difference:0.006495562535573485
+Overall Test Accuracy:0.6205808080808081
+Overall Test Multiplicity:0.5441919191919192
+Time per iteration:174.19096779823303
+----------------------------------------------------------
+Iteration # 3
+Average odds difference:0.033747640817312935
+Overall Test Accuracy:0.6496212121212122
+Overall Test Multiplicity:0.5448232323232324
+Time per iteration:144.1107931137085
+----------------------------------------------------------
+Iteration # 4
+Average odds difference:0.024548003877279623
+Overall Test Accuracy:0.6439393939393939
+Overall Test Multiplicity:0.5132575757575758
+Time per iteration:183.73391795158386
+----------------------------------------------------------
+## Epsilon =0.5
+Iteration # 0
+Average odds difference:0.023517379278727962
+Overall Test Accuracy:0.6420454545454546
+Overall Test Multiplicity:0.26452020202020204
+Time per iteration:205.99587225914001
+----------------------------------------------------------
+Iteration # 1
+Average odds difference:0.020140882501217594
+Overall Test Accuracy:0.6376262626262627
+Overall Test Multiplicity:0.3409090909090909
+Time per iteration:154.59387850761414
+----------------------------------------------------------
+Iteration # 2
+Average odds difference:0.005107303502540239
+Overall Test Accuracy:0.6300505050505051
+Overall Test Multiplicity:0.5151515151515151
+Time per iteration:181.64718461036682
+----------------------------------------------------------
+Iteration # 3
+Average odds difference:0.02999851831819042
+Overall Test Accuracy:0.6439393939393939
+Overall Test Multiplicity:0.5353535353535354
+Time per iteration:167.0667998790741
+----------------------------------------------------------
+Iteration # 4
+Average odds difference:0.023026166001668152
+Overall Test Accuracy:0.6325757575757576
+Overall Test Multiplicity:0.5227272727272727
+Time per iteration:206.4531500339508
+----------------------------------------------------------
+## Epsilon =1
+Iteration # 0
+Average odds difference:0.051414206351077324
+Overall Test Accuracy:0.6502525252525253
+Overall Test Multiplicity:0.25063131313131315
+Time per iteration:188.6953477859497
+----------------------------------------------------------
+Iteration # 1
+Average odds difference:0.0023298337265832414
+Overall Test Accuracy:0.6483585858585859
+Overall Test Multiplicity:0.19128787878787878
+Time per iteration:154.57536673545837
+----------------------------------------------------------
+Iteration # 2
+Average odds difference:0.015600823197082503
+Overall Test Accuracy:0.6540404040404041
+Overall Test Multiplicity:0.307449494949495
+Time per iteration:153.6715612411499
+----------------------------------------------------------
+Iteration # 3
+Average odds difference:0.050762382832054975
+Overall Test Accuracy:0.6654040404040404
+Overall Test Multiplicity:0.3301767676767677
+Time per iteration:198.30780291557312
+----------------------------------------------------------
+Iteration # 4
+Average odds difference:0.04643781700142016
+Overall Test Accuracy:0.6559343434343434
+Overall Test Multiplicity:0.29734848484848486
+Time per iteration:175.29793167114258
+----------------------------------------------------------
+## Epsilon =2
+Iteration # 0
+Average odds difference:0.049277289999326124
+Overall Test Accuracy:0.6609848484848485
+Overall Test Multiplicity:0.017676767676767676
+Time per iteration:181.9391701221466
+----------------------------------------------------------
+Iteration # 1
+Average odds difference:0.03241667446564786
+Overall Test Accuracy:0.6553030303030303
+Overall Test Multiplicity:0.07386363636363637
+Time per iteration:212.90126252174377
+----------------------------------------------------------
+Iteration # 2
+Average odds difference:0.010437338821313896
+Overall Test Accuracy:0.6647727272727273
+Overall Test Multiplicity:0.07323232323232323
+Time per iteration:220.48012852668762
+----------------------------------------------------------
+Iteration # 3
+Average odds difference:0.04585764442321821
+Overall Test Accuracy:0.6824494949494949
+Overall Test Multiplicity:0.0928030303030303
+Time per iteration:157.96696090698242
+----------------------------------------------------------
+Iteration # 4
+Average odds difference:0.033974087599468045
+Overall Test Accuracy:0.6534090909090909
+Overall Test Multiplicity:0.2159090909090909
+Time per iteration:159.1933298110962
+----------------------------------------------------------
