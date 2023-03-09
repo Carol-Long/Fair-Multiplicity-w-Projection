@@ -68,57 +68,57 @@ f.flush()
 f.write('GMB - CE - meo\n')
 gbm_ce_meo = MP_tol(df, protected_attrs=protected_attrs, label_name=label_name, use_protected = use_protected, use_sample_weight=use_sample_weight, tune_threshold=tune_threshold, tolerance=tolerance, log = f, model='gbm', div='cross-entropy', num_iter=repetition, rand_seed=25, constraint='meo')
 # ##
-f.write('GMB - CE - sp\n')
-gbm_ce_sp = MP_tol(df, protected_attrs=protected_attrs, label_name=label_name, use_protected = use_protected, use_sample_weight=use_sample_weight, tune_threshold=tune_threshold, tolerance=tolerance, log = f, model='gbm', div='cross-entropy', num_iter=repetition, rand_seed=25, constraint='sp')
+#f.write('GMB - CE - sp\n')
+#gbm_ce_sp = MP_tol(df, protected_attrs=protected_attrs, label_name=label_name, use_protected = use_protected, use_sample_weight=use_sample_weight, tune_threshold=tune_threshold, tolerance=tolerance, log = f, model='gbm', div='cross-entropy', num_iter=repetition, rand_seed=25, constraint='sp')
 # # ## Logit
 f.write('Logit - CE - meo\n')
 logit_ce_meo = MP_tol(df, protected_attrs=protected_attrs, label_name=label_name, use_protected = use_protected, use_sample_weight=use_sample_weight, tune_threshold=tune_threshold, tolerance=tolerance, log = f, model='logit', div='cross-entropy', num_iter=repetition, rand_seed=25, constraint='meo')
 # ##
-f.write('Logit - CE - sp\n')
-logit_ce_sp = MP_tol(df, protected_attrs=protected_attrs, label_name=label_name, use_protected = use_protected, use_sample_weight=use_sample_weight, tune_threshold=tune_threshold, tolerance=tolerance, log = f, model='logit', div='cross-entropy', num_iter=repetition, rand_seed=25, constraint='sp')
+#f.write('Logit - CE - sp\n')
+#logit_ce_sp = MP_tol(df, protected_attrs=protected_attrs, label_name=label_name, use_protected = use_protected, use_sample_weight=use_sample_weight, tune_threshold=tune_threshold, tolerance=tolerance, log = f, model='logit', div='cross-entropy', num_iter=repetition, rand_seed=25, constraint='sp')
 # ## Random Forest
 f.write('RFC - CE - meo\n')
 rfc_ce_meo = MP_tol(df, protected_attrs=protected_attrs, label_name=label_name, use_protected = use_protected, use_sample_weight=use_sample_weight, tune_threshold=tune_threshold, tolerance=tolerance, log = f, model='rfc', div='cross-entropy', num_iter=repetition, rand_seed=25, constraint='meo')
 # ##
-f.write('RFC - CE - sp\n')
-rfc_ce_sp = MP_tol(df, protected_attrs=protected_attrs, label_name=label_name, use_protected = use_protected, use_sample_weight=use_sample_weight, tune_threshold=tune_threshold, tolerance=tolerance, log = f, model='rfc', div='cross-entropy', num_iter=repetition, rand_seed=25, constraint='sp')
+#f.write('RFC - CE - sp\n')
+#rfc_ce_sp = MP_tol(df, protected_attrs=protected_attrs, label_name=label_name, use_protected = use_protected, use_sample_weight=use_sample_weight, tune_threshold=tune_threshold, tolerance=tolerance, log = f, model='rfc', div='cross-entropy', num_iter=repetition, rand_seed=25, constraint='sp')
 
 
 
 ### KL
 ## GBM
-f.write('GMB - KL - meo\n')
-gbm_kl_meo = MP_tol(df, protected_attrs=protected_attrs, label_name=label_name, use_protected = use_protected, use_sample_weight=use_sample_weight, tune_threshold=tune_threshold, tolerance=tolerance, log = f, model='gbm', div='kl', num_iter=repetition, rand_seed=42, constraint='meo')
+#f.write('GMB - KL - meo\n')
+#gbm_kl_meo = MP_tol(df, protected_attrs=protected_attrs, label_name=label_name, use_protected = use_protected, use_sample_weight=use_sample_weight, tune_threshold=tune_threshold, tolerance=tolerance, log = f, model='gbm', div='kl', num_iter=repetition, rand_seed=42, constraint='meo')
 ##
-f.write('GMB - KL - sp\n')
-gbm_kl_sp = MP_tol(df, protected_attrs=protected_attrs, label_name=label_name, use_protected = use_protected, use_sample_weight=use_sample_weight, tune_threshold=tune_threshold, tolerance=tolerance, log = f, model='gbm', div='kl', num_iter=repetition, rand_seed=42, constraint='sp')
+#f.write('GMB - KL - sp\n')
+#gbm_kl_sp = MP_tol(df, protected_attrs=protected_attrs, label_name=label_name, use_protected = use_protected, use_sample_weight=use_sample_weight, tune_threshold=tune_threshold, tolerance=tolerance, log = f, model='gbm', div='kl', num_iter=repetition, rand_seed=42, constraint='sp')
 ## Logit
-f.write('Logit - KL - meo\n')
-logit_kl_meo = MP_tol(df, protected_attrs=protected_attrs, label_name=label_name, use_protected = use_protected, use_sample_weight=use_sample_weight, tune_threshold=tune_threshold, tolerance=tolerance, log = f, model='logit', div='kl', num_iter=repetition, rand_seed=42, constraint='meo')
+#f.write('Logit - KL - meo\n')
+#logit_kl_meo = MP_tol(df, protected_attrs=protected_attrs, label_name=label_name, use_protected = use_protected, use_sample_weight=use_sample_weight, tune_threshold=tune_threshold, tolerance=tolerance, log = f, model='logit', div='kl', num_iter=repetition, rand_seed=42, constraint='meo')
 ##
-f.write('Logit - KL - sp\n')
-logit_kl_sp = MP_tol(df, protected_attrs=protected_attrs, label_name=label_name, use_protected = use_protected, use_sample_weight=use_sample_weight, tune_threshold=tune_threshold, tolerance=tolerance, log = f, model='logit', div='kl', num_iter=repetition, rand_seed=42, constraint='sp')
+#f.write('Logit - KL - sp\n')
+#logit_kl_sp = MP_tol(df, protected_attrs=protected_attrs, label_name=label_name, use_protected = use_protected, use_sample_weight=use_sample_weight, tune_threshold=tune_threshold, tolerance=tolerance, log = f, model='logit', div='kl', num_iter=repetition, rand_seed=42, constraint='sp')
 ## Random Forest
-f.write('RFC - KL - meo\n')
-rfc_kl_meo = MP_tol(df, protected_attrs=protected_attrs, label_name=label_name, use_protected = use_protected, use_sample_weight=use_sample_weight, tune_threshold=tune_threshold, tolerance=tolerance, log = f, model='rfc', div='kl', num_iter=repetition, rand_seed=42, constraint='meo')
+#f.write('RFC - KL - meo\n')
+#rfc_kl_meo = MP_tol(df, protected_attrs=protected_attrs, label_name=label_name, use_protected = use_protected, use_sample_weight=use_sample_weight, tune_threshold=tune_threshold, tolerance=tolerance, log = f, model='rfc', div='kl', num_iter=repetition, rand_seed=42, constraint='meo')
 ##
-f.write('RFC - KL - sp\n')
-rfc_kl_sp = MP_tol(df, protected_attrs=protected_attrs, label_name=label_name, use_protected = use_protected, use_sample_weight=use_sample_weight, tune_threshold=tune_threshold, tolerance=tolerance, log = f, model='rfc', div='kl', num_iter=repetition, rand_seed=42, constraint='sp')
+#f.write('RFC - KL - sp\n')
+#rfc_kl_sp = MP_tol(df, protected_attrs=protected_attrs, label_name=label_name, use_protected = use_protected, use_sample_weight=use_sample_weight, tune_threshold=tune_threshold, tolerance=tolerance, log = f, model='rfc', div='kl', num_iter=repetition, rand_seed=42, constraint='sp')
 
 
 save = {
     'gbm_ce_meo': gbm_ce_meo,
-    'gbm_ce_sp': gbm_ce_sp,
+    #'gbm_ce_sp': gbm_ce_sp,
     'logit_ce_meo': logit_ce_meo,
-    'logit_ce_sp': logit_ce_sp,
+    #'logit_ce_sp': logit_ce_sp,
     'rfc_ce_meo': rfc_ce_meo,
-    'rfc_ce_sp': rfc_ce_sp,
-    'gbm_kl_meo': gbm_kl_meo,
-    'gbm_kl_sp': gbm_kl_sp,
-    'logit_kl_meo': logit_kl_meo,
-    'logit_kl_sp': logit_kl_sp,
-    'rfc_kl_meo': rfc_kl_meo,
-    'rfc_kl_sp': rfc_kl_sp,
+    #'rfc_ce_sp': rfc_ce_sp,
+    #'gbm_kl_meo': gbm_kl_meo,
+    #'gbm_kl_sp': gbm_kl_sp,
+    #'logit_kl_meo': logit_kl_meo,
+    #'logit_kl_sp': logit_kl_sp,
+    #'rfc_kl_meo': rfc_kl_meo,
+    #'rfc_kl_sp': rfc_kl_sp,
     'tolerance': tolerance
 }
 
